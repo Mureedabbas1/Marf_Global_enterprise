@@ -47,18 +47,20 @@
 <meta name="google-adsense-account" content="ca-pub-6162822251101594">
 <style id="my-marf-login-cta-style">.site-header .header-actions a.my-marf-login-cta{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border:1px solid #c9a96a;border-radius:8px;background:linear-gradient(115deg,#c9a96a,#f0d99f,#c9a96a);color:#100e09;font-family:Manrope,Arial,sans-serif;font-size:11px;font-weight:900;letter-spacing:.07em;line-height:1.2;text-decoration:none;text-transform:uppercase;white-space:nowrap;box-shadow:0 6px 22px rgba(201,169,106,.22)}.site-header .header-actions a.my-marf-login-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}@media(max-width:767px){.site-header .header-actions a.my-marf-login-cta{font-size:9px;padding:9px 8px;letter-spacing:.02em}.site-header .header-actions{gap:7px}}</style>
 <style id="marf-global-logo-fix">
-.brand-logo-link{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;flex:0 0 auto!important;width:clamp(168px,20vw,250px)!important;max-width:42vw!important;min-width:0!important;overflow:visible!important}
-.brand-logo-svg{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:left center!important;overflow:visible!important}
-.footer-brand-link{width:210px!important}
+/* Use the exact square artwork from favicon.svg throughout the site */
+.brand-logo-link{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;width:64px!important;height:64px!important;max-width:none!important;min-width:64px!important;overflow:hidden!important}
+.brand-logo-svg{display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important;object-position:center!important;overflow:hidden!important}
+.footer-brand-link{width:66px!important;height:66px!important;min-width:66px!important}
 .footer-brand-link .brand-logo-svg{max-height:none!important}
-.marf-side-brand{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:48px!important;height:48px!important;flex:0 0 48px!important;border:1px solid rgba(212,175,103,.45)!important;border-radius:50%!important;background:rgba(212,175,103,.06)!important;overflow:hidden!important}
-.marf-side-brand img{display:block!important;width:40px!important;height:40px!important;object-fit:contain!important}
-@media(max-width:767px){.brand-logo-link{width:clamp(132px,39vw,178px)!important;max-width:42vw!important}.brand-logo-svg{max-height:none!important}.footer-brand-link{width:160px!important}.marf-side-brand{width:42px!important;height:42px!important;flex-basis:42px!important}.marf-side-brand img{width:35px!important;height:35px!important}}
-@media(max-width:380px){.brand-logo-link{width:124px!important;max-width:39vw!important}.site-header .header-actions{gap:5px!important}.site-header .my-marf-login-cta{padding:8px 6px!important;font-size:8px!important}}
+.marf-side-brand{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:48px!important;height:48px!important;flex:0 0 48px!important;border:1px solid rgba(212,175,103,.45)!important;border-radius:14px!important;background:rgba(212,175,103,.06)!important;overflow:hidden!important}
+.marf-side-brand img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important}
+.marf-splash-mark img{width:76px!important;height:76px!important;object-fit:contain!important}
+@media(max-width:767px){.brand-logo-link{width:52px!important;height:52px!important;min-width:52px!important}.footer-brand-link{width:58px!important;height:58px!important;min-width:58px!important}.marf-side-brand{width:42px!important;height:42px!important;flex-basis:42px!important}.marf-side-brand img{width:100%!important;height:100%!important}}
+@media(max-width:380px){.brand-logo-link{width:46px!important;height:46px!important;min-width:46px!important}.site-header .header-actions{gap:5px!important}.site-header .my-marf-login-cta{padding:8px 6px!important;font-size:8px!important}}
 </style>
 </head>
 <body>
-  <div class="marf-splash" id="marf-splash" aria-hidden="true"><div class="marf-splash-mark"><img src="marf-monogram.svg" alt=""><i></i><span>GLOBAL</span></div></div>
+  <div class="marf-splash" id="marf-splash" aria-hidden="true"><div class="marf-splash-mark"><img src="favicon.svg?v=5" alt=""><i></i><span>GLOBAL</span></div></div>
     <div class="announcement"><span>THE MARF EDIT</span><span>Thoughtful essentials. Elevated everyday.</span><span>GLOBAL · EST. 2026</span></div>
 
 <aside class="marf-left-sidebar" aria-label="MARF icon navigation">
@@ -86,7 +88,7 @@
 </aside>
 
   <header class="site-header">
-    <a class="brand-logo-link" href="#top" aria-label="MR monogram — MARF Global Enterprises home"><img class="brand-logo-svg" src="marf-logo.svg?v=4" alt="MARF Global Enterprises"></a>
+    <a class="brand-logo-link" href="#top" aria-label="MR monogram — MARF Global Enterprises home"><img class="brand-logo-svg" src="favicon.svg?v=5" alt="MARF Global Enterprises"></a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="products.html" class="catalogue-nav-link">Shop All</a><a href="#collections">Collections</a><a href="#featured">The edit</a><a href="#story">Our philosophy</a><a href="blog.html">The Journal</a>
     </nav>
