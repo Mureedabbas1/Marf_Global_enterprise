@@ -83,12 +83,29 @@
     </nav>
     <div class="header-actions"><a class="my-marf-login-cta" href="account.html">MY MARF LOGIN</a><button class="icon-button search-toggle" aria-label="Search products">⌕</button><button class="cart-button" id="cart-open" aria-label="Open shopping bag"><svg class="bag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8.5h14l1 12H4l1-12Z"/><path d="M9 8.5V6a3 3 0 0 1 6 0v2.5"/></svg></button><button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button></div>
   </header>
-  <section class="marf-timebar" aria-label="Local time">
-    <div class="marf-timebar-label"><span class="marf-clock-dot"></span><span>LOCAL TIME</span></div>
-    <span class="marf-time-display"><svg class="marf-clock-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg><time id="marf-live-clock" class="marf-live-clock" aria-label="Current local time">--:--:--</time></span>
-    <span class="marf-live-date" id="marf-live-date">Loading date…</span>
-    <span class="marf-timezone">PKT · UTC+5</span>
+  <section class="marf-timebar marf-global-clocks" aria-label="United Kingdom and United States local times">
+    <div class="marf-timebar-label"><span class="marf-clock-dot"></span><span>GLOBAL TIME</span></div>
+    <div class="marf-global-clock"><span class="marf-clock-country">UNITED KINGDOM · LONDON</span><time id="marf-uk-clock" class="marf-live-clock" aria-label="Current time in London">--:--:--</time></div>
+    <div class="marf-global-clock"><span class="marf-clock-country">UNITED STATES · NEW YORK</span><time id="marf-us-clock" class="marf-live-clock" aria-label="Current time in New York">--:--:--</time></div>
   </section>
+  <style>
+    .marf-global-clocks{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .marf-global-clock{display:flex;align-items:center;gap:10px}
+    .marf-clock-country{font-size:10px;letter-spacing:.12em;color:var(--muted,#b0a999);font-weight:600}
+    .marf-global-clock .marf-live-clock{font-variant-numeric:tabular-nums;white-space:nowrap}
+    @media(max-width:600px){.marf-global-clocks{gap:10px}.marf-global-clock{width:100%;justify-content:space-between}.marf-clock-country{font-size:9px}}
+  </style>
+  <script>
+    (function(){
+      function updateGlobalClocks(){
+        const now=new Date(),opts={hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false};
+        const uk=document.getElementById('marf-uk-clock'),us=document.getElementById('marf-us-clock');
+        if(uk) uk.textContent=new Intl.DateTimeFormat('en-GB',{...opts,timeZone:'Europe/London'}).format(now);
+        if(us) us.textContent=new Intl.DateTimeFormat('en-US',{...opts,timeZone:'America/New_York'}).format(now);
+      }
+      updateGlobalClocks();setInterval(updateGlobalClocks,1000);
+    })();
+  </script>
   <main>
     <section class="hero" id="top">
       <div class="hero-glow"></div><div class="hero-grid"></div>
