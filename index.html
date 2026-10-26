@@ -74,6 +74,13 @@
 @media(prefers-reduced-motion:reduce){.hero-mini-card{transition:none}}
 </style>
 
+
+<style id="marf-global-hero-copy-visibility">
+.marf-hero-copy{opacity:1!important;visibility:visible!important;transform:none!important;align-self:center;position:relative;z-index:6}
+.marf-hero-copy .eyebrow,.marf-hero-copy h1,.marf-hero-copy .hero-description,.marf-hero-copy .hero-actions,.marf-hero-copy .hero-note{visibility:visible!important;opacity:1!important}
+@media(max-width:620px){.marf-hero-copy{padding-top:8px;padding-bottom:0}}
+</style>
+
 </head>
 <body>
   <div class="marf-splash" id="marf-splash" aria-hidden="true"><div class="marf-splash-mark"><img src="favicon.svg?v=7" alt=""><i></i><span>GLOBAL</span></div></div>
@@ -154,7 +161,7 @@
   <main>
     <section class="hero" id="top">
       <div class="hero-glow"></div><div class="hero-grid"></div>
-      <div class="hero-copy reveal">
+      <div class="hero-copy marf-hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> A NEW PERSPECTIVE ON EVERYDAY</p>
         <h1>Quiet luxury.<br><em>Everyday ritual.</em></h1>
         <p class="hero-description">A considered collection of pieces that bring a little more intention to the way you move through the world.</p>
