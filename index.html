@@ -86,11 +86,11 @@
   <section class="marf-timebar marf-global-clocks" aria-label="Live local times in the United Kingdom and United States">
     <div class="marf-timebar-label"><svg class="marf-timebar-clock-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg><span>LIVE GLOBAL TIME</span></div>
     <div class="marf-global-clock">
-      <span class="marf-clock-country"><span class="marf-country-flag" aria-hidden="true">🇬🇧</span><span>UNITED KINGDOM <i>·</i> LONDON</span></span>
+      <span class="marf-clock-country"><svg class="marf-country-flag marf-flag-uk" viewBox="0 0 60 30" aria-label="United Kingdom flag" role="img"><rect width="60" height="30" fill="#012169"/><path d="M0 0 60 30M60 0 0 30" stroke="#fff" stroke-width="6"/><path d="M0 0 60 30M60 0 0 30" stroke="#C8102E" stroke-width="2.5"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg><span>UNITED KINGDOM <i>·</i> LONDON</span></span>
       <time id="marf-uk-clock" class="marf-live-clock" aria-label="Current local time in London">Loading…</time>
     </div>
     <div class="marf-global-clock">
-      <span class="marf-clock-country"><span class="marf-country-flag" aria-hidden="true">🇺🇸</span><span>UNITED STATES <i>·</i> NEW YORK</span></span>
+      <span class="marf-clock-country"><svg class="marf-country-flag marf-flag-us" viewBox="0 0 60 30" aria-label="United States flag" role="img"><rect width="60" height="30" fill="#fff"/><path d="M0 0h60v2.3H0zm0 4.6h60v2.3H0zm0 4.6h60v2.3H0zm0 4.6h60v2.3H0zm0 4.6h60v2.3H0zm0 4.6h60v2.3H0zm0 4.6h60V30H0z" fill="#B22234"/><rect width="25" height="16.2" fill="#3C3B6E"/><g fill="#fff"><circle cx="4" cy="3" r=".8"/><circle cx="10" cy="3" r=".8"/><circle cx="16" cy="3" r=".8"/><circle cx="22" cy="3" r=".8"/><circle cx="7" cy="7" r=".8"/><circle cx="13" cy="7" r=".8"/><circle cx="19" cy="7" r=".8"/><circle cx="4" cy="11" r=".8"/><circle cx="10" cy="11" r=".8"/><circle cx="16" cy="11" r=".8"/><circle cx="22" cy="11" r=".8"/></g></svg><span>UNITED STATES <i>·</i> NEW YORK</span></span>
       <time id="marf-us-clock" class="marf-live-clock" aria-label="Current local time in New York">Loading…</time>
     </div>
   </section>
@@ -101,7 +101,7 @@
     .marf-global-clocks .marf-global-clock{display:flex!important;flex:1 1 250px!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;min-width:0!important;padding:10px 14px!important;border:1px solid rgba(201,169,106,.2)!important;border-radius:10px!important;background:rgba(255,255,255,.025)!important}
     .marf-global-clocks .marf-clock-country{display:inline-flex!important;align-items:center!important;gap:9px!important;color:#c9c1b0!important;font-family:Manrope,Arial,sans-serif!important;font-size:9px!important;font-weight:700!important;letter-spacing:.09em!important;line-height:1.5!important}
     .marf-global-clocks .marf-clock-country i{font-style:normal;color:#c9a96a}
-    .marf-global-clocks .marf-country-flag{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 26px!important;width:26px!important;height:19px!important;font-family:"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,sans-serif!important;font-size:22px!important;line-height:1!important;letter-spacing:0!important}
+    .marf-global-clocks .marf-country-flag{display:block!important;flex:0 0 30px!important;width:30px!important;height:18px!important;min-width:30px!important;border-radius:2px!important;overflow:hidden!important;box-shadow:0 0 0 1px rgba(255,255,255,.25)!important}
     .marf-global-clocks .marf-live-clock{display:block!important;color:#f3e8ce!important;font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(19px,2vw,25px)!important;font-weight:500!important;letter-spacing:.06em!important;line-height:1.1!important;font-variant-numeric:tabular-nums!important;white-space:nowrap!important}
     @media(max-width:700px){.marf-timebar.marf-global-clocks{align-items:stretch!important;gap:8px!important;padding:12px 12px!important}.marf-global-clocks .marf-timebar-label{width:100%!important}.marf-global-clocks .marf-global-clock{flex:1 1 100%!important;min-height:54px!important;padding:10px 12px!important}.marf-global-clocks .marf-clock-country{font-size:8px!important;letter-spacing:.06em!important}.marf-global-clocks .marf-live-clock{font-size:20px!important}}
   </style>
